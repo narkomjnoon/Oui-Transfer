@@ -1,0 +1,330 @@
+@import "reset";
+@import "variables";
+@import "mixin";
+@import "background";
+
+/**************** PAGE GENERAL **********************************************************************************************/
+
+body {
+  min-height: 100%;
+}
+body {
+  color: #fff;
+  background-color: #fd940a;
+  background-image: radial-gradient(
+    circle,
+    #f9a72b 0%,
+    #fa9026 70%,
+    #fb6c1f 100%
+  );
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+/**************** INTRO **********************************************************************************************/
+.container {
+        max-width: 1100px;
+        margin: 10% auto;
+        display: flex;
+        align-items: flex-start;    
+        flex-wrap: wrap;
+        justify-content: space-around;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+}
+#logo_titre {
+  width: 80%;
+  height: auto;
+  transition: all .3s ease-in-out;
+  z-index: 10;
+}
+.intro {
+        padding: 30px;
+        text-align: center;
+        font-family: "Baloo Thambi", cursive;
+        color: #fff;
+        font-weight: 300;
+        font-size: 160%;
+        z-index: 10;
+        padding-top: 0;       
+}
+#logo_titre:hover{
+  transform: scale(1.05);
+}
+
+/**************** FORMULAIRE **********************************************************************************************/
+
+.formulaire {
+  font-family: "Montserrat Alternates", sans-serif;
+  padding: 16px;
+  background: #f3f1f1;
+  z-index: 10;
+  width: 100%;
+}
+
+/************ TITRE ***********/
+
+.formulaire h1 {
+  background: rgb(255, 123, 0);
+  padding: 20px 0;
+  font-size: 25px;
+  font-weight: 300;
+  text-align: center;
+  color: #fff;
+  margin: -16px -16px 0px -16px;
+  font-family: "Baloo Thambi", cursive;
+}
+
+/****** BOUTON FICHIER ******/
+
+input[type="file"] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+input[type="file"] + label {
+  background: #ff7b00;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  outline: none;
+  position: relative;
+  transition: all 0.3s;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+input[type="file"] + label:hover {
+  background-color: #d3460d;
+}
+input[type="file"] + label.bouton {
+  background-color: #f9a72b;
+  border-radius: 50px;
+  overflow: hidden;
+}
+input[type="file"] + label.bouton::before {
+  color: #fff;
+  content: "\f382";
+  font-family: "Font Awesome 5 Pro";
+  font-size: 100%;
+  height: 100%;
+  right: 130%;
+  line-height: 3.3;
+  position: absolute;
+  top: -13%;
+  transition: all 0.3s;
+}
+input[type="file"] + label.bouton:hover {
+  background-color: rgb(255, 123, 0);
+}
+input[type="file"] + label.bouton:hover::before {
+  right: 88%;
+}
+
+/****** INPUT TEXT ******/
+
+.formulaire input[type="text"],
+.formulaire input[type="email"],
+.formulaire textarea {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 100%;
+  background: #fff;
+  margin-bottom: 4%;
+  border: 1px solid #ccc;
+  padding: 3%;
+  color: #555;
+  font-family: "Montserrat Alternates", sans-serif;
+  resize: none;
+}
+.formulaire input[type="text"]:focus,
+.formulaire input[type="email"]:focus,
+.formulaire textarea:focus {
+  box-shadow: 0 0 5px rgb(255, 123, 0);
+  padding: 3%;
+  border: 1px solid rgb(255, 123, 0);
+}
+
+/****** BOUTON ENVOI ******/
+
+.formulaire input[type="submit"],
+.formulaire input[type="button"] {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 100%;
+  background: #f9a72b;
+  border-bottom-style: none;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  border-radius: 50px;
+  color: #fff;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px;
+  position: relative;
+  transition: all 0.3s;
+  margin-top: 8px;
+}
+.formulaire input[type="submit"]:hover,
+.formulaire input[type="button"]:hover {
+  background:  rgb(255, 123, 0);
+}
+.formulaireinput[type="submit"]::before {
+  color: #fff;
+  content: "\f382";
+  font-family: "Font Awesome 5 Pro";
+  font-size: 100%;
+  height: 100%;
+  right: 130%;
+  line-height: 3.3;
+  position: absolute;
+  top: -16%;
+  transition: all 0.3s;
+}
+
+.formulaireinput[type="submit"]:hover::before {
+  right: 84%;
+}
+
+/**************** RESEAUX **********************************************************************************************/
+
+.media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: url("#goo");
+  cursor: pointer;
+  z-index: 99;
+}
+
+/****** BOUTON PARTAGE ******/
+
+.button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  background-color: #f9a72b;
+  transition: all 0.3s ease-in-out;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+.button:hover {
+  background-color: #ff7b00;
+}
+
+/**************** RECEPTION **********************************************************************************************/
+
+.retour {
+  text-align: center;
+  background-color: #f7f7f7;
+  font-family: "Montserrat Alternates", sans-serif;
+  padding: 16px;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+}
+.titre-retour {
+        background: #ff7b00;
+        padding: 20px 0;
+        font-size: 25px;
+        font-weight: 300;
+        text-align: center;
+        color: #fff;
+        margin: -16px -16px 0px -16px;
+        font-family: "Baloo Thambi", cursive;
+}
+.retour a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        background-color: #f9a72b;
+        transition: all 0.3s ease-in-out;
+        border-radius: 50px;
+        color: #fff;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        padding: 8px;
+        margin: 20px auto; 
+}
+.retour a:hover {
+  background-color: #ff7b00;
+  ;
+}
+.retour p{
+  color: black;
+  padding-top: 20px;
+  /* padding: 4px; */
+  text-align: center;
+  line-height: 22px;
+  &:last-of-type{
+    padding-top: 0;
+  }
+}
+.centrage{
+        align-items: center;
+}
+#items {
+        color: black;
+        text-align: center;
+        padding-bottom: 12px;
+  p{
+        padding: 3px;
+  }
+}
+.popup {
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 100000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        top: 0;
+  p:last-child {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-size: 25px;
+  }
+}
+.none {
+  display: none;
+}
+
+footer p{
+  text-align: center;
+  margin-bottom: 20px;
+}
+/**************** RESPONSIVE **********************************************************************************************/
+@media (max-width: 699px){
+     .media{
+             display: none;
+     }   
+}
